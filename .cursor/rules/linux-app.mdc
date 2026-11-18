@@ -1,0 +1,19 @@
+---
+description: Linux GTK app and USB writer conventions
+globs: linux/**/*,p1401/linuxusb.py,p1401/linuxroot.py,tests/test_linux_*.py
+alwaysApply: false
+---
+
+# Linux app
+
+- UI is GTK 4 + PyGObject; window runs as the user, never as root
+- Root only via `pkexec` for ACPI dump and stick write
+- Only USB disks; refuse system mounts (`/`, `/boot`, `/home`, …) and open LUKS/LVM/RAID
+- Re-identify the stick by serial/size/model before erase
+- State under `$XDG_STATE_HOME/nullmoth/1401/`; no log upload on Linux
+- Tests must not touch real disks:
+
+```bash
+python3 -m unittest tests.test_linux_usb tests.test_linux_root
+python3 linux/1401.py --selftest
+```

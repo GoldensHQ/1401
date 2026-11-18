@@ -1,0 +1,15 @@
+---
+description: Conventions when changing the Python engine
+globs: p1401/**/*.py
+alwaysApply: false
+---
+
+# Engine (`p1401/`)
+
+- Keep Windows and Linux on the same modules; OS-specific I/O belongs in dedicated helpers
+  (`linuxusb.py`, `linuxroot.py`, `rawdisk.py`, etc.), not forked business rules
+- Rules that mutate `config.plist` are recorded in the build result; name them clearly
+- Downloads: exact URL, size, SHA-256; refuse mismatches
+- Prefer plain "why" comments over narrating the code
+- After rule / kext / `engine.py` / `nullmoth.py` changes, run the hardware corpus when feasible
+- Unit tests: `python3 -m unittest discover -s tests -t . -p 'test_*.py'`

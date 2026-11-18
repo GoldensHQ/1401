@@ -1,0 +1,34 @@
+---
+description: Core 1401 fork conventions for AI-assisted development
+alwaysApply: true
+---
+
+# 1401 (fork) — project rules
+
+AI coding is allowed in this checkout. Follow `AGENTS.md` and `DEVELOPING.md`.
+
+## Layout
+
+- Engine steps: `p1401/` (`scan`, `engine`/`nullmoth`, `guide`, `usbwriter`/`linuxusb`, `report`)
+- Linux GTK window: `linux/1401.py` — same four steps as Windows, no second engine
+- Do not edit `upstream/` (pinned copies)
+- Docs for behavior: `docs/HOW-IT-WORKS.md`, Linux specifics: `linux/README.md`
+
+## Hard constraints
+
+- No Apple code/binaries/SDK-derived files in the repo
+- Third-party adds: pin URL/size/SHA-256; update `NOTICE.md` and `p1401/licenses.json`
+- No secrets or personal hardware dumps
+- Fail loud — never pretend a failed step succeeded
+- Stick writing erases disks; prefer fake `lsblk`/ACPI fixtures in tests
+
+## Git / gh
+
+- Default push remote: `fork` (`kik4311/1401`), not `origin` (`nullmoth/1401`)
+- Use `gh` for PRs/issues/checks on the fork; do not PR upstream unless Lev asks
+- Commit only when Lev asks; use `git commit -s` (DCO)
+- Leave binary noise alone (e.g. accidental `macserial.exe` diffs) unless asked
+
+## Verify
+
+Run the smallest relevant tests from `AGENTS.md` / `DEVELOPING.md` before claiming done.
