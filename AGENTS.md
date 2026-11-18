@@ -1,6 +1,6 @@
 # Notes for AI assistants
 
-This checkout is Lev's fork (`kik4311/1401`), branch work often on `linux-support`.
+This checkout is Lev's fork (`kik4311/1401`); day-to-day work is on `main` (tracks `fork/main`).
 AI-assisted coding, commits, PRs on the **fork**, and `gh` usage are welcome here.
 
 Upstream `nullmoth/1401` still rejects AI-written contributions (`CONTRIBUTING.md`).

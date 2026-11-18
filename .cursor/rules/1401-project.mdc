@@ -24,7 +24,7 @@ AI coding is allowed in this checkout. Follow `AGENTS.md` and `DEVELOPING.md`.
 
 ## Git / gh
 
-- Default push remote: `fork` (`kik4311/1401`), not `origin` (`nullmoth/1401`)
+- Default branch: `main` tracking `fork/main` (`kik4311/1401`); do not push `origin` (`nullmoth/1401`) unless asked
 - Use `gh` for PRs/issues/checks on the fork; do not PR upstream unless Lev asks
 - Commit only when Lev asks; use `git commit -s` (DCO)
 - Leave binary noise alone (e.g. accidental `macserial.exe` diffs) unless asked
