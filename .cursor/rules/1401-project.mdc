@@ -26,6 +26,7 @@ AI coding is allowed in this checkout. Follow `AGENTS.md` and `DEVELOPING.md`.
 
 - Default branch: `main` tracking `fork/main` (`kik4311/1401`); do not push `origin` (`nullmoth/1401`) unless asked
 - Use `gh` for PRs/issues/checks on the fork; do not PR upstream unless Lev asks
+- Never commit or push AI/Cursor files (`AGENTS.md` AI rewrites, `.cursor/`) onto upstream PR branches (e.g. `linux-support`)
 - Commit only when Lev asks; use `git commit -s` (DCO)
 - Leave binary noise alone (e.g. accidental `macserial.exe` diffs) unless asked
 

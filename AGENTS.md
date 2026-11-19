@@ -7,6 +7,10 @@ Upstream `nullmoth/1401` still rejects AI-written contributions (`CONTRIBUTING.m
 Do not open or update PRs against `origin`/`nullmoth` unless Lev explicitly asks;
 when he does, he must own and be able to explain every line before submit.
 
+**Never put AI/Cursor tooling on a PR branch.** `AGENTS.md` rewrites that allow AI coding,
+`.cursor/`, and similar fork-only files stay on `fork/main` (or local-only). PR branches
+such as `linux-support` must contain only the product change for upstream.
+
 ## Product
 
 1401 installs macOS on a PC (OpenCore reverse of Boot Camp). Shared engine in `p1401/`;
